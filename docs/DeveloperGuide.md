@@ -60,6 +60,7 @@ static void sourceNews(String line, List<NewsArticle> list) {
     int index = Integer.parseInt(split[1]) + 1;
     System.out.println(list.get(index).getSource());
 }
+```
 
 
 ## Product scope
