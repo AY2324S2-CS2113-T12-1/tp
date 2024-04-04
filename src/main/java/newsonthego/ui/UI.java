@@ -122,4 +122,8 @@ public class UI {
                 "\n" +
                 "enjoy reading :))");
     }
+
+    public static void printInitialPrompt() {
+        System.out.println("What do you want from me?");
+    }
 }

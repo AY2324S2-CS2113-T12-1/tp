@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 
 import static newsonthego.Parser.parseToText;
 import static newsonthego.ArticleScrapper.scrapeArticles;
+import static newsonthego.ui.UI.printInitialPrompt;
 
 public class NewsOnTheGo {
 
@@ -254,25 +255,7 @@ public class NewsOnTheGo {
         savedNews.clearFile();
     }
 
-    /**
-     * Retrieves and displays the details of a news article from the provided list based on the index specified in the
-     * input line.
-     * The input line is expected to contain the command "source" followed by the index of the news article to retrieve.
-     * If the index is valid and the article exists in the list, its details are printed to the console.
-     * If the index is out of bounds or not a valid integer, an error message is displayed.
-     *
-     * @param line The input line containing the command and index of the news article.
-     * @param list The list of NewsArticle objects from which to retrieve the news article.
-     */
-    static void sourceNews(String line, List<NewsArticle> list) {
-        String[] split = line.split(" ");
-        try {
-            int index = Integer.parseInt(split[1]) - 1;
-            System.out.println(parseToText(list.get(index)));
-        } catch (IndexOutOfBoundsException | NumberFormatException e) {
-            System.out.println(UI.INVALID_ARTICLE_INDEX_MESSAGE);
-        }
-    }
+
 
     public static boolean isFileEmpty(String filePath) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -311,7 +294,7 @@ public class NewsOnTheGo {
         TopicsFile.loadTopics(favouriteTopics);
 
         while (true) {
-            System.out.println("What do you want from me?");
+            printInitialPrompt();
             String line = in.nextLine();
             String command = line.split(" ")[0];
             try {
@@ -326,4 +309,6 @@ public class NewsOnTheGo {
         TopicsFile.saveTopics(favouriteTopics);
         logger.log(Level.INFO, "Ending NewsOnTheGo");
     }
+
+
 }

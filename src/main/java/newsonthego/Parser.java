@@ -3,6 +3,7 @@ package newsonthego;
 import java.util.List;
 
 import newsonthego.commands.DailyNewsCommand;
+import newsonthego.commands.GetNewsSourceCommand;
 import newsonthego.commands.InfoNewsCommand;
 import newsonthego.newstopic.NewsTopic;
 import newsonthego.ui.UI;
@@ -68,9 +69,9 @@ public class Parser {
             break;
         case SOURCE:
             if (topic >= 0) { //find source of news using index based on the current topic list shown to user
-                NewsOnTheGo.sourceNews(line, topics.get(topic).getRelatedNewsArticles());
+                GetNewsSourceCommand.getNewsSource(line, topics.get(topic).getRelatedNewsArticles());
             } else {
-                NewsOnTheGo.sourceNews(line, list);
+                GetNewsSourceCommand.getNewsSource(line, list);
             }
             break;
         case INFO:
