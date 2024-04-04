@@ -126,4 +126,12 @@ public class UI {
     public static void printInitialPrompt() {
         System.out.println("What do you want from me?");
     }
+
+    public static void printBye() {
+        System.out.println("Bye. Hope to see you again soon!");
+    }
+
+    public static void printConfused() {
+        System.out.println("I'm sorry, but I don't know what that means :-(");
+    }
 }

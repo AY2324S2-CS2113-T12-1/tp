@@ -92,12 +92,12 @@ public class Parser {
             }
             break;
         case BYE:
-            System.out.println("Bye. Hope to see you again soon!");
+            UI.printBye();
             break;
         case VOID:
             // fall through
         default:
-            System.out.println("I'm sorry, but I don't know what that means :-(");
+            UI.printConfused();
             break;
         }
     }
