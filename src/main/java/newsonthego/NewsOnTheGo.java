@@ -39,15 +39,17 @@ public class NewsOnTheGo {
     private static final Logger logger = Logger.getLogger("NewsOnTheGo");
     private static final ArrayList<NewsTopic> favouriteTopics = new ArrayList<>();
 
+
+
     public enum Command {
-        HELP, DAILY, TOPICS, FILTER, STAR, STARRED, REMOVE, URL, HEADLINES,
-        GET, SOURCE, SAVE, LOAD, SUGGEST, CLEAR, BACK, QUOTE, BYE, VOID
+        HELP, DAILY, TOPICS, FILTER, STAR, STARRED, REMOVE, URL, HEADLINES, GET, SOURCE, SAVE, LOAD, SUGGEST,
+        CLEAR, BACK, QUOTE, BYE, VOID
     }
 
     private static boolean processCommand(String command, String line, List<NewsArticle> list) {
-        logger.info("Received command: " + command);
+
+        // Check for null or empty command
         if (command == null || command.trim().isEmpty()) {
-            logger.warning("No command entered");
             System.out.println("No command entered. Please try again.");
             return false;
         }
@@ -57,10 +59,9 @@ public class NewsOnTheGo {
             return command.trim().equalsIgnoreCase(Command.BYE.toString());
         } catch (IllegalArgumentException e) {
             System.out.println("Unknown command: '" + command + "'. Please try again.");
-            logger.warning("Unknown command: " + command);
         } catch (Exception e) {
+            // Catch any other unexpected exceptions
             System.out.println("An error occurred while processing the command: " + e.getMessage());
-            logger.severe("Error processing command: " + e.getMessage());
         }
         return false;
     }
