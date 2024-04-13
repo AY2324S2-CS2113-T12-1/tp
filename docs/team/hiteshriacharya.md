@@ -12,9 +12,9 @@ RepoSense Link
 </a>
 </h2>
 
-## Summary of Contributions
+### Summary of Contributions
 
-### Article Scraper
+#### Article Scraper
 
 The `ArticleScraper` class provides functionality to scrape articles from a given URL and extract key information such as 
 theme, published date, author, abstract, and headline. It uses the Jsoup library to parse the HTML content of the webpage 
@@ -25,8 +25,22 @@ The extracted information is then saved to a specified output file in a structur
 author, published date, URL, abstract, and theme of the article. This information can be useful for summarizing 
 and categorizing news articles.
 
-### Quote Generator
+#### Quote Generator
 
 The random quote function is designed to randomly output one of several famous quotes. It is implemented as a class 
 called `QuoteGenerator` that contains a list of 10-20 famous quotes and a method called `getRandomQuote()`. This method 
 randomly selects and returns a quote from the list.
+
+### Contributions to Documentation
+
+#### Contributions to the UG:
+- Added documentation for the `quote` 
+#### Contributions to the DG:
+- Added documentation for the `Article Scraper` and its functions
+
+
+### Contributions to Team-Based Tasks
+
+### Reviews/Mentoring Contributions
+
+### Contributions beyond Project Team
