@@ -126,8 +126,6 @@ public class StorageURL {
                 "hasina-13754953.html");
         urls.add("https://www.firstpost.com/world/japan-rejigs-definition-to-protect-its-" +
                 "world-famous-whisky-from-foreign-made-imposters-13754949.html");
-        urls.add("https://www.firstpost.com/world/channel-crossings-uk-migrants-rishi-" +
-                "sunak13754935-13754935.html");
         urls.add("https://www.firstpost.com/tech/microsoft-faces-2-4bn-by-the-eu-will-" +
                 "split-teams-and-office-amid-ongoing-antitrust-lawsuit-13754937.html");
         urls.add("https://www.firstpost.com/tech/waiting-for-xiaomi-customers-planning-" +
