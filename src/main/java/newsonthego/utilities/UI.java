@@ -245,7 +245,7 @@ public class UI {
                         "| `CLEAR`    | Clears the saved articles list.                             " +
                         "        | `clear`              |\n" +
                         "| `QUOTE`    | Prints a random, inspirational quote.                       " +
-                        "        | `quote`              |\n" +
+                        "        | `bye`                |\n" +
                         "+------------+---------------------------------------------------------+" +
                         "----------------------------------+\n" +
                         "Thank you for using News On The Go! Enjoy reading :))"
