@@ -102,9 +102,11 @@ public class DailyNewsCommand {
                 showExtract(dailyLine, articlesOfTheDay);
                 System.out.println("What do you want from me?\n" +
                         INDENT + "To return to main, type in: back ");
+                printLine();
                 break;
             case "back":
                 isPolling = false;
+                printLine();
                 System.out.println("You are back to the main function!");
                 printLine();
                 break;

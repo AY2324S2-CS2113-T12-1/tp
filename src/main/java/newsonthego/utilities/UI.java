@@ -130,6 +130,7 @@ public class UI {
     }
 
     public static void printIndexError(List<NewsArticle> articleList) {
+        printLine();
         printError("Theres only " + articleList.size() + " articles in the list...");
     }
 
